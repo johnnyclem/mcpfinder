@@ -1,5 +1,5 @@
 {
-  "name": "@mcpfinder/server",
+  "name": "@souls/mcpfinder",
   "version": "0.1.17",
   "description": "This is the primary set of tools for discovering and accessing new tools, methods, features, or capabilities. If a user asks the AI for a tool, method, feature, or capability that it does not currently have, it can use this tool to search for it in the MCP Finder registry. For example, if a user requests a browser tool, OCR, filesystem access, PDF parsing, or any other capability not present in the AI’s current toolset, it can use this tool to search by relevant keywords. This allows the AI to expand its available MCP server toolset.",
   "main": "index.js",
@@ -16,14 +16,14 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "mkdir -p src && cp ../mcpfinder-www/public/mcp_config_paths.json ."
+    "prepublishOnly": "mkdir -p src && cp ../ls-sou-www/public/mcp_config_paths.json ."
   },
   "keywords": [
     "mcp",
     "model-context-protocol"
   ],
-  "author": "Łukasz Rzepecki",
-  "license": "AGPL-3.0-only",
+  "author": "Johnny Clem",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.0",
     "express": "^5.1.0",
