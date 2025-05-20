@@ -29,8 +29,8 @@ let globalApiUrl = DEFAULT_API_URL;
 const helpText = `
 MCPfinder
 
-Manages local MCP configurations for clients like Cursor and Claude.
-Communicates with the MCPFinder Registry API (https://mcpfinder.dev/api).
+Manages local MCP configurations for clients like Cursor and Souls.
+Communicates with the MCPFinder Registry API (https://mcp.sou.ls/api/v1).
 
 Usage: node index.js [options] [command]
 
@@ -262,6 +262,8 @@ async function resolveAndValidateConfigPath(client_type, config_file_path) {
 async function getConfigPath(clientType) {
     const homeDir = os.homedir();
     switch (clientType) {
+        case 'souls':
+            return path.join(homeDir, 'Library', 'Preferences', 'Souls', 'config.json');
         case 'cursor':
             return path.join(homeDir, '.cursor', 'mcp.json');
         case 'claude':
@@ -556,7 +558,7 @@ const RemoveMcpServerConfigTool = {
   inputSchema: {
     type: "object",
     properties: {
-      client_type: { type: "string", description: "The type of client application (currently supported: 'cursor', 'claude', 'windsurf'). Mutually exclusive with config_file_path." },
+      client_type: { type: "string", description: "The type of client application (currently supported: 'souls', 'cursor', 'claude', 'windsurf'). Mutually exclusive with config_file_path." },
       config_file_path: { type: "string", description: "Absolute path or path starting with '~' to the config file. Mutually exclusive with client_type." },
       server_id: { type: "string", description: "The unique MCP server identifier (config key name) of the server configuration entry to remove." }
     },
