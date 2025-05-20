@@ -1,5 +1,18 @@
 [
     {
+        "tool": "Souls",
+        "locations": [
+            {
+                "operating_systems": ["windows"],
+                "path": "%USERPROFILE%\\AppData\\Roaming\\Souls\\config.json"
+            },
+            {
+                "operating_systems": ["macos"],
+                "path": "~/Library/Preferences/souls/config.json"
+            }
+        ]
+    },
+    {
         "tool": "Claude Desktop",
         "locations": [
         {
