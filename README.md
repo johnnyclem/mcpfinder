@@ -1,4 +1,4 @@
-# MCPfinder 🔧🤖 (`@mcpfinder/server`)
+# MCPfinder 🔧🤖 (`https://github.com/johnnyclem/mcpfinder`)
 
 **Meet the simplest way to supercharge your coding and AI agents with MCP — an "API for AI." MCPfinder enables language models to search for and install new capabilities on demand through client applications that support the MCP protocol. No coding or manual setup required.**
 
@@ -24,7 +24,7 @@ Specifically, it enables the AI assistant to:
 
 Run in your terminal the interactive setup tool to automatically update the MCP configuration file:
 ```bash
-npx -y @mcpfinder/server install
+npx -y https://github.com/johnnyclem/mcpfinder install
 ```
 This command guides you through selecting your client (Cursor, VS Code, Claude, etc.) and adds the necessary `mcpfinder` entry to the correct configuration file (e.g., `~/.cursor/mcp.json`).
 See "Running from source" and "Commands and Options" for more details if you are working directly with the source code.
@@ -42,7 +42,7 @@ To manually configure an MCP client, you need to create or modify its JSON confi
       "command": "npx",
       "args": [
         "-y",
-        "@mcpfinder/server"
+        "https://github.com/johnnyclem/mcpfinder"
       ]
     },
   }
